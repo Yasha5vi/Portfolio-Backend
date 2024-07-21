@@ -38,11 +38,11 @@ async function sendMail(email,msg){
         })
 
         const mailOptions = {
-            from:`contact <${email}>`,
+            from:`Portfolio <${email}>`,
             to:'yashasvichandra84@gmail.com',
             subject:'Message from Portfolio',
             text:msg,
-            // html:<h1>HEllo from portfolio</h1> optional
+            html:`<p>${email}</p><p>${msg}</p>`
         }
 
         const result = await transport.sendMail(mailOptions); // as a promise
